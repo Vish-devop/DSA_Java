@@ -29,7 +29,7 @@ public class PathSumOfBT {
             int sum = targetSum - root.val;
             boolean left = hasPathSum(root.left, sum);
             boolean right = hasPathSum(root.right, sum);
-            return left || right;
+            return (left || right);
         }
     }
 }
