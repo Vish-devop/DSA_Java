@@ -1,6 +1,8 @@
 package src.binarySearchProblems;
 
 public class FindSmallestLetterGreaterThanTarget {
+
+    // https://leetcode.com/problems/find-smallest-letter-greater-than-target/description/
     class Solution {
         public char nextGreatestLetter(char[] letters, char target) {
             int i = 0;
