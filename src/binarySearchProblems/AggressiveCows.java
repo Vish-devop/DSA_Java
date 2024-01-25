@@ -25,17 +25,18 @@ public class AggressiveCows {
     public static void main(String[] args) throws java.lang.Exception {
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
-        while(t > 0) {
+        while (t > 0) {
             int n = sc.nextInt();
             int c = sc.nextInt();
             int[] arr = new int[n];
-            for(int i = 0; i < n; i++) {
+            for (int i = 0; i < n; i++) {
                 arr[i] = sc.nextInt();
             }
             System.out.println(solve(arr, n, c));
             t--;
         }
     }
+
     /*
     * Example
     Input:
@@ -50,13 +51,12 @@ public class AggressiveCows {
         // This function should return the LARGEST MINIMUM DISTANCE
         Arrays.sort(arr);
         int low = 1;
-        int high = arr[n-1] - arr[0];
-        while(low <= high) {
+        int high = arr[n - 1] - arr[0];
+        while (low <= high) {
             int mid = low + (high - low) / 2;
-            if(check(arr, mid, c)) {
+            if (check(arr, mid, c)) {
                 low = mid + 1;
-            }
-            else {
+            } else {
                 high = mid - 1;
             }
         }
@@ -67,12 +67,12 @@ public class AggressiveCows {
         int countC = 1;
         int prev = arr[0];
 
-        for(int i = 1; i < arr.length; i++) {
-            if(arr[i] - prev >= d) {
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] - prev >= d) {
                 countC++;
                 prev = arr[i];
             }
-            if(countC >= c) return true;
+            if (countC >= c) return true;
         }
         return false;
     }
