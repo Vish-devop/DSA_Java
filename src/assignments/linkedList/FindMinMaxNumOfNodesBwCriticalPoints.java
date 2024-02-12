@@ -13,7 +13,7 @@ import java.util.List;
  * ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+class FindMinMaxNumOfNodesBwCriticalPoints {
     // https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points/
     public int[] nodesBetweenCriticalPoints(ListNode head) {
         int[] ans = new int[2];
